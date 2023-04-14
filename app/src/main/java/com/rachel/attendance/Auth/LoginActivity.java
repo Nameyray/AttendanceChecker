@@ -1,4 +1,4 @@
-package com.rachel.attendance.Ui;
+package com.rachel.attendance.Auth;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import com.rachel.attendance.MainActivity;
+import com.rachel.attendance.Ui.ProfileActivity;
 import com.rachel.attendance.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -48,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     public void Sign(View view) {
-        startActivity(new Intent(LoginActivity.this, ProfileActivity.class));
+        startActivity(new Intent(LoginActivity.this, MainActivity.class));
         finish();
     }
 }

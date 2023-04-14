@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.rachel.attendance.Auth.LoginActivity;
 import com.rachel.attendance.R;
 
 public class
