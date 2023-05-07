@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.rachel.attendance.MainActivity;
+import com.rachel.attendance.Ui.EditProfileActivity;
 import com.rachel.attendance.Ui.ProfileActivity;
 import com.rachel.attendance.R;
 
@@ -50,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     public void Sign(View view) {
-        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        startActivity(new Intent(LoginActivity.this, EditProfileActivity.class));
         finish();
     }
 }
