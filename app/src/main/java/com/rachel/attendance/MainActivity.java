@@ -11,6 +11,9 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+
+import androidx.appcompat.widget.Toolbar;
 
 import com.rachel.attendance.Auth.LoginActivity;
 import com.rachel.attendance.Ui.EditProfileActivity;
@@ -20,11 +23,13 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
         replaceFragment(new HomeFragment());
         binding.bottomNavigationView.setBackground(null);
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
@@ -46,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         });
+
         binding.menuPop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showPopMenu() {
-        android.app.AlertDialog.Builder builder= new android.app.AlertDialog.Builder(this);
-        View dialogView = getLayoutInflater().inflate(R.layout.pop_up_menu,null);
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
+        View dialogView = getLayoutInflater().inflate(R.layout.pop_up_menu, null);
 
         builder.setView(dialogView);
         AlertDialog dialog = builder.create();
@@ -81,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
-        if (dialog.getWindow() != null){
+        if (dialog.getWindow() != null) {
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
         }
         dialog.show();

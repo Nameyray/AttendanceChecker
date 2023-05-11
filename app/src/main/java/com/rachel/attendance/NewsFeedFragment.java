@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class NewsFeedFragment extends Fragment {
+public class NewsFeedFragment extends Fragment implements FragmentInterface {
 
 
     @Override
@@ -16,5 +16,10 @@ public class NewsFeedFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_news_feed, container, false);
+    }
+
+    @Override
+    public String getFragmentTitle() {
+        return "News Feed"; // Return the desired title for HomeFragment
     }
 }
