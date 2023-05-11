@@ -8,7 +8,7 @@
         android:icon="@drawable/home1"/>
 
     <item
-        android:id="@+id/journey"
+        android:id="@+id/news"
         android:title=""
         android:icon="@drawable/chat_24"
         />
@@ -17,11 +17,11 @@
         android:title=""/>
 
     <item
-        android:id="@+id/forums"
+        android:id="@+id/classes"
         android:title=""
-        android:icon="@drawable/users" />
+        android:icon="@drawable/training" />
     <item
-        android:id="@+id/profile"
+        android:id="@+id/teachers"
         android:title=""
         android:icon="@drawable/users" />
 

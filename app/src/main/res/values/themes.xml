@@ -9,10 +9,11 @@
         <item name="colorSecondary">@color/light_blue</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">@color/dark_blue</item>
         <!-- Customize your theme here. -->
     </style>
-    <style name="Theme.Attendance.NoActionBar">
+
+    <style name="Theme.Attendance.NoActionBar" >
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>

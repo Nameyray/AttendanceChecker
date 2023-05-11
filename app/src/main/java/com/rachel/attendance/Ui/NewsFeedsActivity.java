@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.rachel.attendance.R;
+
 public class NewsFeedsActivity extends AppCompatActivity {
 
     @Override
