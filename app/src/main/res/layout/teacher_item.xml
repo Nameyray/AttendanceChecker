@@ -34,7 +34,6 @@
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/roundedImage"
         app:layout_constraintEnd_toStartOf="@+id/imageButton"
         app:layout_constraintStart_toEndOf="@+id/roundedImage"
         app:layout_constraintTop_toTopOf="@+id/roundedImage" />
@@ -55,7 +54,7 @@
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/light_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageButton"
