@@ -6,7 +6,7 @@
     android:background="@color/dark_blue"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="3dp">
+    android:layout_margin="8dp">
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/roundedImage"

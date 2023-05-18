@@ -4,6 +4,7 @@ package com.rachel.attendance;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -40,6 +41,30 @@ public class HomeFragment extends Fragment implements FragmentInterface {
         subjectRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL, false));
         subjectRec.setHasFixedSize(true);
         subjectRec.setNestedScrollingEnabled(false);
+
+        binding.weekdayTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Replace the current fragment with a new fragment
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.frame_layout, new UpcomingWCFragment()) // Replace with your desired fragment
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        binding.RemedialTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Replace the current fragment with a new fragment
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.frame_layout, new ScheRemedialFragment()) // Replace with your desired fragment
+                        .addToBackStack(null)
+                        .commit();
+
+            }
+        });
         return root;
     }
 

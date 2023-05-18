@@ -13,10 +13,6 @@ S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 ]
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
-l
-<app/src/main/java/com/rachel/attendance/ClassesFragment.java,7\b\7bf8cd65a1338814dbf61376d8af68444ad48ab2
-o
-?app/src/main/java/com/rachel/attendance/Auth/LoginActivity.java,4\5\45b0e54c00e30f6831b8899df2586c061e0ecbc1
 q
 Aapp/src/main/java/com/rachel/attendance/Ui/NewsFeedsActivity.java,a\0\a05317b7c7087b7823b4719896f9d416a27d083c
 q
@@ -27,8 +23,6 @@ O.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2023_21_50__Changes_.xml
 Y.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2023_21_50_[Changes]/shelved.patch,b\8\b845b51d9e92eaf8cd4f38d02936d791c918ae5f
 n
 >app/src/main/java/com/rachel/attendance/FragmentInterface.java,8\a\8ace48687ed0cba65aca9b7df86201a6f7ecbf52
-i
-9app/src/main/java/com/rachel/attendance/MainActivity.java,8\2\82eb19a6f86961883e0423f8496e5d6d6e213899
 p
 @app/src/main/java/com/rachel/attendance/Models/TeacherModel.java,0\2\02210df84087a801cc237d54b2c469bf4ad5e62c
 p
@@ -37,7 +31,3 @@ p
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 t
 Dapp/src/main/java/com/rachel/attendance/Adapters/TscFeedAdapter.java,b\a\ba157f0d857bb6b91ab60abf3e10ae1950fb8cef
-m
-=app/src/main/java/com/rachel/attendance/TscFeedsFragment.java,0\4\0425a5d0bf48e668fe83f3930f9d322a5ac46971
-m
-=app/src/main/java/com/rachel/attendance/NewsFeedFragment.java,e\8\e85d6b29107465abb324b2c9a1ef6c12da904ec0
