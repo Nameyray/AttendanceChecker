@@ -11,15 +11,10 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
-
-import androidx.appcompat.widget.Toolbar;
 
 import com.rachel.attendance.Auth.LoginActivity;
 import com.rachel.attendance.Ui.EditProfileActivity;
 import com.rachel.attendance.databinding.ActivityMainBinding;
-
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -51,8 +46,19 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         });
+        binding.fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create and open the new fragment here
+                Fragment newFragment = new TimetableFragment();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction(); // Use `getSupportFragmentManager()` instead of `getParentFragmentManager()`
+                transaction.replace(R.id.frame_layout, newFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
 
-        binding.menuPop.setOnClickListener(new View.OnClickListener() {
+        binding.roundedImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showPopMenu();

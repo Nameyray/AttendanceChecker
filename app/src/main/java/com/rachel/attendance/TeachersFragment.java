@@ -16,6 +16,7 @@ import com.rachel.attendance.databinding.FragmentHomeBinding;
 import com.rachel.attendance.databinding.FragmentTeachersBinding;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class TeachersFragment extends Fragment implements FragmentInterface{
 
@@ -33,25 +34,27 @@ public class TeachersFragment extends Fragment implements FragmentInterface{
         binding = FragmentTeachersBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         teacherRec = root.findViewById(R.id.teachersRV);
-        /// recyclerview
-        teacherModels =new ArrayList<>();
-        teacherModels.add(new TeacherModel( "Prudence M"));
-        teacherModels.add(new TeacherModel( "Prudence M"));
-        teacherModels.add(new TeacherModel( "Prudence M"));
-        teacherModels.add(new TeacherModel( "Prudence M"));
-        teacherModels.add(new TeacherModel( "Prudence M"));
-        teacherModels.add(new TeacherModel( "Prudence M"));
-        teacherModels.add(new TeacherModel( "Prudence M"));
-        teacherModels.add(new TeacherModel( "Moses M"));
-        teacherModels.add(new TeacherModel( "Moses M"));
-        teacherModels.add(new TeacherModel( "Moses M"));
-        teacherModels.add(new TeacherModel( "Moses M"));
-        teacherModels.add(new TeacherModel( "Moses M"));
-        teacherModels.add(new TeacherModel( "Moses M"));
+        // Create and populate the teacherModels list
+        teacherModels = new ArrayList<>();
+        teacherModels.addAll(Arrays.asList(
+                new TeacherModel("Prudence M"),
+                new TeacherModel("Prudence M"),
+                new TeacherModel("Prudence M"),
+                new TeacherModel("Prudence M"),
+                new TeacherModel("Prudence M"),
+                new TeacherModel("Prudence M"),
+                new TeacherModel("Prudence M"),
+                new TeacherModel("Moses M"),
+                new TeacherModel("Moses M"),
+                new TeacherModel("Moses M"),
+                new TeacherModel("Moses M"),
+                new TeacherModel("Moses M"),
+                new TeacherModel("Moses M")
+        ));
 
-        teacherAdapter = new TeacherAdapter(getActivity(), teacherModels, this);
+        teacherAdapter = new TeacherAdapter(getActivity(), teacherModels, getChildFragmentManager());
         teacherRec.setAdapter(teacherAdapter);
-        teacherRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL, false));
+        teacherRec.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
         teacherRec.setHasFixedSize(true);
         teacherRec.setNestedScrollingEnabled(false);
 

@@ -53,9 +53,21 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/menuPop"
+                    app:layout_constraintEnd_toStartOf="@+id/notification"
                     app:layout_constraintStart_toEndOf="@+id/roundedImageView"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/notification"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/light_blue"
+                    android:src="@drawable/notifications_none_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/menuPop"
+                    app:layout_constraintEnd_toStartOf="@+id/menuPop"
+                    app:layout_constraintTop_toTopOf="@+id/menuPop" />
 
                 <ImageView
                     android:id="@+id/menuPop"

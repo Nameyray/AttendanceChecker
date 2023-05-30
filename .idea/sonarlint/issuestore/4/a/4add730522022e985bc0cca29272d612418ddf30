@@ -1,0 +1,6 @@
+
+†
+java:S1319"dThe type of "list" should be an interface such as "List" rather than the implementation "ArrayList".(½“Ñ©ýÿÿÿÿ8”êÝ×‚1
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’åô×ùÿÿÿÿ
+]
+java:S1172";Remove this unused method parameter "scheRemedialFragment".(½“Ñ©ýÿÿÿÿ8ó¹ß×‚1

@@ -14,8 +14,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.rachel.attendance.ChatFragment;
 import com.rachel.attendance.Models.TeacherModel;
 import com.rachel.attendance.R;
 import com.rachel.attendance.TeachersFragment;
@@ -26,10 +29,12 @@ public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.ViewHold
 
     Context context;
     ArrayList<TeacherModel>list;
+    FragmentManager fragmentManager;
 
-    public TeacherAdapter(Context context, ArrayList<TeacherModel> list, TeachersFragment teachersFragment) {
+    public TeacherAdapter(Context context, ArrayList<TeacherModel> list, FragmentManager fragmentManager) {
         this.context = context;
         this.list = list;
+        this.fragmentManager = fragmentManager;
     }
 
     @NonNull
@@ -54,6 +59,8 @@ public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.ViewHold
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.chat_menu:
+                                // Open the chat fragment here
+                                openChatFragment();
 
                                 return true;
                             case R.id.swap_menu:
@@ -72,6 +79,15 @@ public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.ViewHold
         });
 
     }
+
+    private void openChatFragment() {
+        ChatFragment chatFragment = new ChatFragment();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame_layout, chatFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
 
     @Override
     public int getItemCount() {

@@ -4,12 +4,12 @@
 
     <item
         android:id="@+id/home"
-        android:title=""
+        android:title="Home"
         android:icon="@drawable/home1"/>
 
     <item
         android:id="@+id/news"
-        android:title=""
+        android:title="Feeds"
         android:icon="@drawable/chat_24"
         />
 
@@ -18,11 +18,11 @@
 
     <item
         android:id="@+id/classes"
-        android:title=""
+        android:title="Classes"
         android:icon="@drawable/training" />
     <item
         android:id="@+id/teachers"
-        android:title=""
+        android:title="Teachers"
         android:icon="@drawable/users" />
 
 </menu>

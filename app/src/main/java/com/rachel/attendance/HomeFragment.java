@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.rachel.attendance.Adapters.SubjectAdapter;
 import com.rachel.attendance.Models.SubjectModel;
@@ -41,6 +42,54 @@ public class HomeFragment extends Fragment implements FragmentInterface {
         subjectRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL, false));
         subjectRec.setHasFixedSize(true);
         subjectRec.setNestedScrollingEnabled(false);
+        binding.textView8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Replace the current fragment with a new fragment
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.frame_layout, new AttendanceRecordFragment()) // Replace with your desired fragment
+                        .addToBackStack(null)
+                        .commit();
+
+            }
+        });
+        binding.textView9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Replace the current fragment with a new fragment
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.frame_layout, new AttendanceRecordFragment()) // Replace with your desired fragment
+                        .addToBackStack(null)
+                        .commit();
+
+            }
+        });
+        binding.textView10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Replace the current fragment with a new fragment
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.frame_layout, new AttendanceRecordFragment()) // Replace with your desired fragment
+                        .addToBackStack(null)
+                        .commit();
+
+            }
+        });
+        binding.swapped.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Replace the current fragment with a new fragment
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.frame_layout, new AttendanceRecordFragment()) // Replace with your desired fragment
+                        .addToBackStack(null)
+                        .commit();
+
+            }
+        });
 
         binding.weekdayTxt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +109,18 @@ public class HomeFragment extends Fragment implements FragmentInterface {
                 FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
                 fragmentManager.beginTransaction()
                         .replace(R.id.frame_layout, new ScheRemedialFragment()) // Replace with your desired fragment
+                        .addToBackStack(null)
+                        .commit();
+
+            }
+        });
+        binding.textView12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Replace the current fragment with a new fragment
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.frame_layout, new AllRecordsFragment()) // Replace with your desired fragment
                         .addToBackStack(null)
                         .commit();
 
