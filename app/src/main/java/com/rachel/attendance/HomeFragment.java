@@ -45,49 +45,69 @@ public class HomeFragment extends Fragment implements FragmentInterface {
         binding.textView8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Replace the current fragment with a new fragment
+                String textValue = binding.textView8.getText().toString();
+
                 FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                Fragment fragment = new AttendanceRecordFragment();
+                Bundle args = new Bundle();
+                args.putString("textValue", textValue);
+                fragment.setArguments(args);
+
                 fragmentManager.beginTransaction()
-                        .replace(R.id.frame_layout, new AttendanceRecordFragment()) // Replace with your desired fragment
+                        .replace(R.id.frame_layout, fragment) // Replace with your desired fragment
                         .addToBackStack(null)
                         .commit();
-
             }
         });
         binding.textView9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Replace the current fragment with a new fragment
+                String textValue = binding.textView9.getText().toString();
+
                 FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                Fragment fragment = new AttendanceRecordFragment();
+                Bundle args = new Bundle();
+                args.putString("textValue", textValue);
+                fragment.setArguments(args);
+
                 fragmentManager.beginTransaction()
-                        .replace(R.id.frame_layout, new AttendanceRecordFragment()) // Replace with your desired fragment
+                        .replace(R.id.frame_layout, fragment) // Replace with your desired fragment
                         .addToBackStack(null)
                         .commit();
-
             }
         });
         binding.textView10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Replace the current fragment with a new fragment
+                String textValue = binding.textView10.getText().toString();
+
                 FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                Fragment fragment = new AttendanceRecordFragment();
+                Bundle args = new Bundle();
+                args.putString("textValue", textValue);
+                fragment.setArguments(args);
+
                 fragmentManager.beginTransaction()
-                        .replace(R.id.frame_layout, new AttendanceRecordFragment()) // Replace with your desired fragment
+                        .replace(R.id.frame_layout, fragment) // Replace with your desired fragment
                         .addToBackStack(null)
                         .commit();
-
             }
         });
         binding.swapped.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Replace the current fragment with a new fragment
+                String textValue = binding.swapped.getText().toString();
+
                 FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                Fragment fragment = new AttendanceRecordFragment();
+                Bundle args = new Bundle();
+                args.putString("textValue", textValue);
+                fragment.setArguments(args);
+
                 fragmentManager.beginTransaction()
-                        .replace(R.id.frame_layout, new AttendanceRecordFragment()) // Replace with your desired fragment
+                        .replace(R.id.frame_layout, fragment) // Replace with your desired fragment
                         .addToBackStack(null)
                         .commit();
-
             }
         });
 

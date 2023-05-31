@@ -1,19 +1,15 @@
 package com.rachel.attendance.Adapters;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.rachel.attendance.ChatFragment;
 import com.rachel.attendance.Models.TeacherModel;
 import com.rachel.attendance.R;
-import com.rachel.attendance.TeachersFragment;
+import com.rachel.attendance.SwapFragment;
 
 import java.util.ArrayList;
 
@@ -64,7 +60,8 @@ public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.ViewHold
 
                                 return true;
                             case R.id.swap_menu:
-
+                                // Open the swap fragment here
+                                openSwapFragment();
 
                                 return true;
                             default:
@@ -80,13 +77,24 @@ public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.ViewHold
 
     }
 
+    private void openSwapFragment() {
+        AppCompatActivity activity = (AppCompatActivity) context;
+        SwapFragment swapFragment = new SwapFragment();
+        FragmentTransaction fragmentTransaction = activity.getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.frame_layout, swapFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
     private void openChatFragment() {
+        AppCompatActivity activity = (AppCompatActivity) context;
         ChatFragment chatFragment = new ChatFragment();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        FragmentTransaction fragmentTransaction = activity.getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout, chatFragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
+
 
 
     @Override

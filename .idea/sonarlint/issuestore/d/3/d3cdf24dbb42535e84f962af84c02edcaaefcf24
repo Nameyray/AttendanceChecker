@@ -1,14 +1,0 @@
-
-†
-java:S1319"dThe type of "list" should be an interface such as "List" rather than the implementation "ArrayList".(„ŠÔåıÿÿÿÿ8±×àì‚1
-J
-java:S16049"(Make this anonymous inner class a lambda(Ÿ¼êÒüÿÿÿÿ8²×àì‚1
-D
-java:S1604."(Make this anonymous inner class a lambda(ˆøà8³×àì‚1
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’åô×ùÿÿÿÿ
-U
-java:S1172"3Remove this unused method parameter "homeFragment".(„ŠÔåıÿÿÿÿ8 Øàì‚1
-Y
-java:S18544"<Remove this useless assignment to local variable "students".(Ì¡ˆŞ8ªØàì‚1
-J
-java:S14814"-Remove this unused "students" local variable.(Ì¡ˆŞ8¯Øàì‚1

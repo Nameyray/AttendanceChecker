@@ -15,8 +15,6 @@ p
 @app/src/main/java/com/rachel/attendance/Models/TeacherModel.java,0\2\02210df84087a801cc237d54b2c469bf4ad5e62c
 p
 @app/src/main/java/com/rachel/attendance/Models/TscFeedModel.java,0\4\046b04741e5e70866e56ff23cf08efd17c2549f6
-t
-Dapp/src/main/java/com/rachel/attendance/Adapters/TscFeedAdapter.java,b\a\ba157f0d857bb6b91ab60abf3e10ae1950fb8cef
 w
 G.idea/sonarlint/issuestore/2/a/2afbb999f001938c88fa43fc2ef52abf0f8213e4,5\1\516e730a14e71f02fa73f3acd6dc7cea9a9fe002
 Å
@@ -69,15 +67,11 @@ u
 Eapp/src/main/java/com/rachel/attendance/Models/ScheduledRemModel.java,4\d\4d6c8e9dd0d9eb2cd42d9b45ee14bc96aeb5be14
 q
 Aapp/src/main/java/com/rachel/attendance/ScheRemedialFragment.java,5\0\506999bf8622a2b681f425e65244f35fa977522e
-t
-Dapp/src/main/java/com/rachel/attendance/Adapters/SubjectAdapter.java,d\3\d3cdf24dbb42535e84f962af84c02edcaaefcf24
 r
 Bapp/src/main/java/com/rachel/attendance/Models/UpcomingCModel.java,e\6\e6ff7ff1220d7e0fae4341cd1d2a55f73f5631f5
 o
 ?app/src/main/java/com/rachel/attendance/UpcomingWCFragment.java,c\b\cb0436e8a85b28b641589ab7c49d96f263e58a2a
 t
 Dapp/src/main/java/com/rachel/attendance/Adapters/ClassesAdapter.java,4\7\4781469558d00ea711d631b8e39e1730a64e26d8
-m
-=app/src/main/java/com/rachel/attendance/NewsFeedFragment.java,e\8\e85d6b29107465abb324b2c9a1ef6c12da904ec0
 s
 Capp/src/main/java/com/rachel/attendance/Ui/EditProfileActivity.java,c\4\c49037ae7ea8bed8db8d4c9bdd7cb6cce0121772
