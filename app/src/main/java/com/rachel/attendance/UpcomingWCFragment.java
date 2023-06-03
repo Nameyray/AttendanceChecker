@@ -41,7 +41,7 @@ public class UpcomingWCFragment extends Fragment {
         upcomingCModels.add(new UpcomingCModel( "Thursday","Biology","8:00 AM"));
         upcomingCModels.add(new UpcomingCModel( "Friday","Biology","8:00 AM"));
 
-        upcomingCAdapter = new UpcomingCAdapter(getActivity(), upcomingCModels, this);
+        upcomingCAdapter = new UpcomingCAdapter(getActivity(), upcomingCModels);
         upcomingRec.setAdapter(upcomingCAdapter);
         upcomingRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL, false));
         upcomingRec.setHasFixedSize(true);

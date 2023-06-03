@@ -1,0 +1,215 @@
+Index: app/src/main/java/com/rachel/attendance/UpcomingWCFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.rachel.attendance;\r\n\r\nimport android.os.Bundle;\r\n\r\nimport androidx.fragment.app.Fragment;\r\nimport androidx.recyclerview.widget.LinearLayoutManager;\r\nimport androidx.recyclerview.widget.RecyclerView;\r\n\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\n\r\nimport com.rachel.attendance.Adapters.SubjectAdapter;\r\nimport com.rachel.attendance.Adapters.UpcomingCAdapter;\r\nimport com.rachel.attendance.Models.SubjectModel;\r\nimport com.rachel.attendance.Models.UpcomingCModel;\r\nimport com.rachel.attendance.databinding.FragmentTscFeedsBinding;\r\nimport com.rachel.attendance.databinding.FragmentUpcomingWCBinding;\r\n\r\nimport java.util.ArrayList;\r\n\r\npublic class UpcomingWCFragment extends Fragment {\r\n\r\n    private FragmentUpcomingWCBinding binding;\r\n    RecyclerView upcomingRec;\r\n    ArrayList<UpcomingCModel> upcomingCModels;\r\n    UpcomingCAdapter upcomingCAdapter;\r\n\r\n    @Override\r\n    public View onCreateView(LayoutInflater inflater, ViewGroup container,\r\n                             Bundle savedInstanceState) {\r\n        // Inflate the layout for this fragment\r\n        binding = FragmentUpcomingWCBinding.inflate(inflater, container, false);\r\n        View root = binding.getRoot();\r\n        upcomingRec = root.findViewById(R.id.upcomingWeekly);\r\n        /// recyclerview\r\n        upcomingCModels =new ArrayList<>();\r\n        upcomingCModels.add(new UpcomingCModel( \"Monday\",\"Biology\",\"8:00 AM\"));\r\n        upcomingCModels.add(new UpcomingCModel( \"Tuesday\",\"Biology\",\"8:00 AM\"));\r\n        upcomingCModels.add(new UpcomingCModel( \"Wednesday\",\"Biology\",\"8:00 AM\"));\r\n        upcomingCModels.add(new UpcomingCModel( \"Thursday\",\"Biology\",\"8:00 AM\"));\r\n        upcomingCModels.add(new UpcomingCModel( \"Friday\",\"Biology\",\"8:00 AM\"));\r\n\r\n        upcomingCAdapter = new UpcomingCAdapter(getActivity(), upcomingCModels, this);\r\n        upcomingRec.setAdapter(upcomingCAdapter);\r\n        upcomingRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL, false));\r\n        upcomingRec.setHasFixedSize(true);\r\n        upcomingRec.setNestedScrollingEnabled(false);\r\n\r\n        return root;\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/rachel/attendance/UpcomingWCFragment.java b/app/src/main/java/com/rachel/attendance/UpcomingWCFragment.java
+--- a/app/src/main/java/com/rachel/attendance/UpcomingWCFragment.java	(revision 112760104149fe218fb890ee95af12fd8749ba81)
++++ b/app/src/main/java/com/rachel/attendance/UpcomingWCFragment.java	(date 1685789133398)
+@@ -41,7 +41,7 @@
+         upcomingCModels.add(new UpcomingCModel( "Thursday","Biology","8:00 AM"));
+         upcomingCModels.add(new UpcomingCModel( "Friday","Biology","8:00 AM"));
+ 
+-        upcomingCAdapter = new UpcomingCAdapter(getActivity(), upcomingCModels, this);
++        upcomingCAdapter = new UpcomingCAdapter(getActivity(), upcomingCModels);
+         upcomingRec.setAdapter(upcomingCAdapter);
+         upcomingRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL, false));
+         upcomingRec.setHasFixedSize(true);
+Index: app/src/main/java/com/rachel/attendance/SwapFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.rachel.attendance;\r\n\r\nimport android.os.Bundle;\r\n\r\nimport androidx.fragment.app.Fragment;\r\n\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\n\r\npublic class SwapFragment extends Fragment {\r\n\r\n\r\n    @Override\r\n    public View onCreateView(LayoutInflater inflater, ViewGroup container,\r\n                             Bundle savedInstanceState) {\r\n        // Inflate the layout for this fragment\r\n        return inflater.inflate(R.layout.fragment_swap, container, false);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/rachel/attendance/SwapFragment.java b/app/src/main/java/com/rachel/attendance/SwapFragment.java
+--- a/app/src/main/java/com/rachel/attendance/SwapFragment.java	(revision 112760104149fe218fb890ee95af12fd8749ba81)
++++ b/app/src/main/java/com/rachel/attendance/SwapFragment.java	(date 1685789583126)
+@@ -3,18 +3,46 @@
+ import android.os.Bundle;
+ 
+ import androidx.fragment.app.Fragment;
++import androidx.recyclerview.widget.LinearLayoutManager;
++import androidx.recyclerview.widget.RecyclerView;
+ 
+ import android.view.LayoutInflater;
+ import android.view.View;
+ import android.view.ViewGroup;
+ 
++import com.rachel.attendance.Adapters.UpcomingCAdapter;
++import com.rachel.attendance.Models.UpcomingCModel;
++import com.rachel.attendance.databinding.FragmentSwapBinding;
++import com.rachel.attendance.databinding.FragmentUpcomingWCBinding;
++
++import java.util.ArrayList;
++
+ public class SwapFragment extends Fragment {
+-
++    private FragmentSwapBinding binding;
++    RecyclerView upcomingRec;
++    ArrayList<UpcomingCModel> upcomingCModels;
++    UpcomingCAdapter upcomingCAdapter;
+ 
+     @Override
+     public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                              Bundle savedInstanceState) {
+         // Inflate the layout for this fragment
+-        return inflater.inflate(R.layout.fragment_swap, container, false);
++        binding = FragmentSwapBinding.inflate(inflater, container, false);
++        View root = binding.getRoot();
++        upcomingRec = root.findViewById(R.id.upcomingWeekly);
++        /// recyclerview
++        upcomingCModels =new ArrayList<>();
++        upcomingCModels.add(new UpcomingCModel( "Monday","Biology","8:00 AM"));
++        upcomingCModels.add(new UpcomingCModel( "Tuesday","Biology","8:00 AM"));
++        upcomingCModels.add(new UpcomingCModel( "Wednesday","Biology","8:00 AM"));
++        upcomingCModels.add(new UpcomingCModel( "Thursday","Biology","8:00 AM"));
++
++        upcomingCAdapter = new UpcomingCAdapter(getActivity(), upcomingCModels);
++        upcomingRec.setAdapter(upcomingCAdapter);
++        upcomingRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL, false));
++        upcomingRec.setHasFixedSize(true);
++        upcomingRec.setNestedScrollingEnabled(false);
++
++        return root;
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_swap.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout\r\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"@color/dark_blue\"\r\n    android:orientation=\"vertical\"\r\n    tools:context=\".SwapFragment\">\r\n\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_swap.xml b/app/src/main/res/layout/fragment_swap.xml
+--- a/app/src/main/res/layout/fragment_swap.xml	(revision 112760104149fe218fb890ee95af12fd8749ba81)
++++ b/app/src/main/res/layout/fragment_swap.xml	(date 1685789133467)
+@@ -1,12 +1,89 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <androidx.constraintlayout.widget.ConstraintLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+-    android:background="@color/dark_blue"
++    android:background="@color/light_blue"
+     android:orientation="vertical"
+     tools:context=".SwapFragment">
+ 
++    <EditText
++        android:id="@+id/search_Txt"
++        android:layout_width="match_parent"
++        android:layout_height="50dp"
++        android:layout_marginStart="16dp"
++        android:layout_marginTop="8dp"
++        android:layout_marginEnd="16dp"
++        android:background="@drawable/search_back"
++        android:drawableEnd="@drawable/search_24"
++        android:hint="Search subject"
++        android:paddingStart="8dp"
++        android:paddingEnd="8dp"
++        android:textColor="@color/black"
++        android:textSize="18sp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <androidx.cardview.widget.CardView
++        android:layout_width="match_parent"
++        android:layout_height="0dp"
++        android:layout_marginLeft="16dp"
++        android:layout_marginTop="16dp"
++        android:layout_marginRight="16dp"
++        android:layout_marginBottom="16dp"
++        app:cardBackgroundColor="@color/dark_blue"
++        app:cardCornerRadius="10dp"
++        app:cardElevation="4dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/search_Txt">
++
++        <androidx.constraintlayout.widget.ConstraintLayout
++            android:layout_width="match_parent"
++            android:layout_height="match_parent">
++
++            <TextView
++                android:id="@+id/textView5"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:gravity="center_horizontal"
++                android:text="Weekday Classes"
++                android:textColor="@color/white"
++                android:textSize="22sp"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toTopOf="parent" />
++
++            <androidx.recyclerview.widget.RecyclerView
++                android:id="@+id/upcomingWeekly"
++                android:layout_width="match_parent"
++                android:layout_height="0dp"
++                android:layout_marginTop="16dp"
++                android:layout_marginBottom="8dp"
++                app:layout_constraintBottom_toTopOf="@+id/appCompatButton"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toBottomOf="@+id/textView5" />
++
++            <androidx.appcompat.widget.AppCompatButton
++                android:id="@+id/appCompatButton"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_marginEnd="8dp"
++                android:layout_marginBottom="8dp"
++                android:background="@drawable/btn_back"
++                android:backgroundTint="@color/light_blue"
++                android:padding="10dp"
++                android:text="Swap Class"
++                android:textColor="@color/black"
++                app:layout_constraintBottom_toBottomOf="parent"
++                app:layout_constraintEnd_toEndOf="parent" />
++        </androidx.constraintlayout.widget.ConstraintLayout>
++    </androidx.cardview.widget.CardView>
++
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/rachel/attendance/Adapters/UpcomingCAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.rachel.attendance.Adapters;\r\n\r\nimport android.content.Context;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.TextView;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.recyclerview.widget.RecyclerView;\r\n\r\nimport com.rachel.attendance.Models.UpcomingCModel;\r\nimport com.rachel.attendance.R;\r\nimport com.rachel.attendance.UpcomingWCFragment;\r\n\r\nimport java.util.ArrayList;\r\n\r\n\r\npublic class UpcomingCAdapter extends RecyclerView.Adapter<UpcomingCAdapter.ViewHolder> {\r\n    Context context;\r\n    ArrayList<UpcomingCModel>list;\r\n\r\n    public UpcomingCAdapter(Context context, ArrayList<UpcomingCModel> list, UpcomingWCFragment upcomingWCFragment) {\r\n        this.context = context;\r\n        this.list = list;\r\n    }\r\n\r\n    @NonNull\r\n    @Override\r\n    public UpcomingCAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {\r\n        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.upcoming_item,parent,false));\r\n    }\r\n\r\n    @Override\r\n    public void onBindViewHolder(@NonNull UpcomingCAdapter.ViewHolder holder, int position) {\r\n        final UpcomingCModel s = list.get(position);\r\n        holder.day.setText(s.getDay());\r\n        holder.time.setText(s.getTime());\r\n        holder.subject.setText(s.getSubject());\r\n\r\n    }\r\n\r\n    @Override\r\n    public int getItemCount() {\r\n        return list.size();\r\n    }\r\n\r\n    public class ViewHolder extends RecyclerView.ViewHolder {\r\n        TextView day;\r\n        TextView subject;\r\n        TextView time;\r\n\r\n\r\n        public ViewHolder(@NonNull View itemView) {\r\n            super(itemView);\r\n            day = itemView.findViewById(R.id.textView16);\r\n            subject = itemView.findViewById(R.id.textView17);\r\n            time = itemView.findViewById(R.id.timeTxt);\r\n\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/rachel/attendance/Adapters/UpcomingCAdapter.java b/app/src/main/java/com/rachel/attendance/Adapters/UpcomingCAdapter.java
+--- a/app/src/main/java/com/rachel/attendance/Adapters/UpcomingCAdapter.java	(revision 112760104149fe218fb890ee95af12fd8749ba81)
++++ b/app/src/main/java/com/rachel/attendance/Adapters/UpcomingCAdapter.java	(date 1685789133439)
+@@ -20,7 +20,7 @@
+     Context context;
+     ArrayList<UpcomingCModel>list;
+ 
+-    public UpcomingCAdapter(Context context, ArrayList<UpcomingCModel> list, UpcomingWCFragment upcomingWCFragment) {
++    public UpcomingCAdapter(Context context, ArrayList<UpcomingCModel> list) {
+         this.context = context;
+         this.list = list;
+     }
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" project-jdk-name=\"jbr-17\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n  <component name=\"VisualizationToolProject\">\r\n    <option name=\"state\">\r\n      <ProjectState>\r\n        <option name=\"scale\" value=\"0.2\" />\r\n      </ProjectState>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 112760104149fe218fb890ee95af12fd8749ba81)
++++ b/.idea/misc.xml	(date 1685643867179)
+@@ -1,4 +1,3 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">

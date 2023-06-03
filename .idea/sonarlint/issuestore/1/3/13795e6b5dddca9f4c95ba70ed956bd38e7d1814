@@ -1,0 +1,16 @@
+
+E
+java:S1604R"(Make this anonymous inner class a lambda(Ö¹™º8•ÙÏÁ†1
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’åô×ùÿÿÿÿ
+`
+java:S1117B">Rename "dateFormat" which hides the field declared at line 25.(Ê”æòşÿÿÿÿ8úÚÏÁ†1
+]
+java:S1854a"@Remove this useless assignment to local variable "selectedDate".(ìÎÏÚ8†ÛÏÁ†1
+N
+java:S1481a"1Remove this unused "selectedDate" local variable.(ìÎÏÚ8ŒÛÏÁ†1
+G
+java:S1068"+Remove this unused "context" private field.(êİç8ôÙÌÁ†1
+P
+java:S1068".Remove this unused "dateFormat" private field.(ß˜©şÿÿÿÿ8õÙÌÁ†1
+Q
+java:S1144i"/Remove this unused private "formatDate" method.(÷ö–æÿÿÿÿÿ8¨ÛÏÁ†1

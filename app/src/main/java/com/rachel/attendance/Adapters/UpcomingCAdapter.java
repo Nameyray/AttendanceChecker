@@ -20,7 +20,7 @@ public class UpcomingCAdapter extends RecyclerView.Adapter<UpcomingCAdapter.View
     Context context;
     ArrayList<UpcomingCModel>list;
 
-    public UpcomingCAdapter(Context context, ArrayList<UpcomingCModel> list, UpcomingWCFragment upcomingWCFragment) {
+    public UpcomingCAdapter(Context context, ArrayList<UpcomingCModel> list) {
         this.context = context;
         this.list = list;
     }

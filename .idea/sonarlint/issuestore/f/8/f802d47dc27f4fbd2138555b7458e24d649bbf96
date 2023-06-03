@@ -1,0 +1,7 @@
+
+
+java:S1319"dThe type of "list" should be an interface such as "List" rather than the implementation "ArrayList".(Ó¿ğú8·œ‹Ä†1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’åô×ùÿÿÿÿ8İÙŠÄ†1
+L
+java:S1172"/Remove this unused method parameter "context1".(Ó¿ğú8ù…ŸÄ†1
+n	java:S116."RRename this field "Subject" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌâÍ8€ÚŠÄ†1
