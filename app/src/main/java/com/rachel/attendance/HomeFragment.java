@@ -42,6 +42,40 @@ public class HomeFragment extends Fragment implements FragmentInterface {
         subjectRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL, false));
         subjectRec.setHasFixedSize(true);
         subjectRec.setNestedScrollingEnabled(false);
+        binding.classes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String textValue = binding.classes.getText().toString();
+
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                Fragment fragment = new ExtraFragment();
+                Bundle args = new Bundle();
+                args.putString("textValue", textValue);
+                fragment.setArguments(args);
+
+                fragmentManager.beginTransaction()
+                        .replace(R.id.frame_layout, fragment) // Replace with your desired fragment
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        binding.extraTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String textValue = binding.extraTxt.getText().toString();
+
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                Fragment fragment = new ExtraFragment();
+                Bundle args = new Bundle();
+                args.putString("textValue", textValue);
+                fragment.setArguments(args);
+
+                fragmentManager.beginTransaction()
+                        .replace(R.id.frame_layout, fragment) // Replace with your desired fragment
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
         binding.textView8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

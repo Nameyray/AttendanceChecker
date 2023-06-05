@@ -64,6 +64,24 @@ public class MainActivity extends AppCompatActivity {
                 showPopMenu();
             }
         });
+        binding.notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showNotificationPopMenu();
+            }
+        });
+    }
+
+    private void showNotificationPopMenu() {
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
+        View dialogView = getLayoutInflater().inflate(R.layout.notification_menu, null);
+
+        builder.setView(dialogView);
+        AlertDialog dialog = builder.create();
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+        }
+        dialog.show();
     }
 
     private void showPopMenu() {

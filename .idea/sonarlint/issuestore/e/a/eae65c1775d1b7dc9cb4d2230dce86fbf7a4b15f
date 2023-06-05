@@ -1,0 +1,6 @@
+
+Ä
+java:S1319"dThe type of "list" should be an interface such as "List" rather than the implementation "ArrayList".(≥ÅÑ<8´ìüóá1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÂÙ◊˘ˇˇˇˇ8≠ìüóá1
+[
+java:S1172"?Remove this unused method parameter "attendanceRecordFragment".(≥ÅÑ<8‹‹Ûóá1
